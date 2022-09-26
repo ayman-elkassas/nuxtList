@@ -11,11 +11,14 @@
     "generate": "nuxt generate",
     "test": "ava",
     "test:unit": "cross-env TEST=unit ava ./test/specs/**/*",
-    "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
+    "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "@nuxtjs/axios": "^5.12.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
@@ -27,5 +30,6 @@
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^2.0.0"
-  }
+  },
+  "snyk": true
 }
